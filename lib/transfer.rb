@@ -16,7 +16,6 @@ class Transfer
     if valid?
       self.sender.balance -= amount
       self.receiver.balance += amount
-
       self.status = "complete"
     else
       self.status = "rejected"
