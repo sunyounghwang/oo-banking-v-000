@@ -16,7 +16,7 @@ class Transfer
     if valid?
       self.sender.balance -= amount
       self.receiver.balance += amount
-      self.last_transfer_amt = amount
+
       self.status = "complete"
     else
       self.status = "rejected"
@@ -29,5 +29,6 @@ class Transfer
       self.sender.balance += amount
       self.receiver.balance -= amount
       self.status = "reversed"
+    end
   end
 end
